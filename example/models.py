@@ -10,8 +10,8 @@ class Sender(models.Model):
         return "%s [%s]" % (self.name , self.email )
 
 class Message(models.Model):
-    sender = models.CharField(max_length=200)
-    recipient = models.CharField(max_length=200)
+    sender = models.ForeignKey('Sender', on_delete=models.CASCADE, related_name='sender')
+    recipient = models.ForeignKey('Sender', on_delete=models.CASCADE, related_name='recipient')
     message = models.CharField(max_length=200)
     visible = models.IntegerField(default=1)
     timestamp = models.DateTimeField('date created')
