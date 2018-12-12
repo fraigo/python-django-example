@@ -3,7 +3,10 @@ from django.http import HttpResponse
 from example.models import Sender, Message
 
 def index(request):
-    messages = Message.objects.all()
+    try:
+        messages = Message.objects.all()
+    except:
+        messages = []
     content = []
     for message in messages:
         content.append('<div style="border:1px solid gray;padding:5px">')
