@@ -64,17 +64,28 @@ The main steps are:
 
 3.- For windows, download and execute the installer.
 
-### Register your application in Heroku
 
-1.- Create an account in Heroku.com to login (https://signup.heroku.com/)
-2.- After registation, go to https://dashboard.heroku.com/
-3.- Create a new application using the button [Add] (https://dashboard.heroku.com/new-app)
-
-### Login to Heroku
+### Login into Heroku
 
 You need an accout in Heroku.com to login.
 
 `heroku login [--interactive]`
+
+### Register your application in Heroku
+
+**Using the Heroku Dashboard**
+
+1.- Create an account in Heroku.com to login (https://signup.heroku.com/)
+
+2.- After registation, go to https://dashboard.heroku.com/
+
+3.- Create a new application using the button [Add] (https://dashboard.heroku.com/new-app)
+
+**Using the Heroku CLI**
+
+Run inside your project folder:
+
+`heroku apps:create your-app-name`
 
 ### Asociate your repository with Heroku
 
